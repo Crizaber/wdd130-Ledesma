@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Hooked! | Patterns</title>
+  <style>
+    /* Style Guide Specifications from Screenshot 2026-07-01 142650.jpg */
+    body {
+      background-color: #1b2e3f;
+      color: #f8f2e6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header & Hero Layout */
+    header {
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-banner {
+      width: 100%;
+      height: auto;
+      max-height: 350px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(27, 46, 63, 0.85);
+      padding: 15px;
+      border-radius: 50%;
+    }
+
+    .logo-img {
+      width: 140px;
+      height: 140px;
+      display: block;
+    }
+
+    /* Navigation Bar matching wireframe */
+    nav {
+      background-color: #14222f;
+      display: flex;
+      justify-content: center;
+      border-top: 2px solid #f8f2e6;
+      border-bottom: 2px solid #f8f2e6;
+    }
+
+    nav a {
+      color: #f8f2e6;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      background-color: #2c4963;
+    }
+
+    /* Layout Structure from Wireframe */
+    main {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .intro-p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      line-height: 1.6;
+      color: #e0dacb;
+    }
+
+    .patterns-container {
+      display: grid;
+      grid-template-columns: 300px 1fr 1fr 1fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    /* Left Featured Column (Fulfills the tall itemized list on the wireframe left) */
+    .featured-column {
+      grid-column: 1;
+      grid-row: span 3; /* Spans down next to the 3 major rows */
+      background-color: #243d54;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #34526f;
+    }
+
+    .featured-image {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .featured-column h3 {
+      margin-top: 20px;
+      border-bottom: 1px solid #f8f2e6;
+      padding-bottom: 5px;
+    }
+
+    .featured-column ol, .featured-column ul {
+      padding-left: 20px;
+      line-height: 1.5;
+    }
+
+    .featured-column li {
+      margin-bottom: 8px;
+    }
+
+    /* Pattern Card Steps Styles */
+    .pattern-card {
+      background-color: #243d54;
+      border-radius: 8px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+      border: 1px solid #34526f;
+    }
+
+    .pattern-thumbnail {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .pattern-card h4 {
+      margin: 0 0 8px 0;
+      color: #ffffff;
+      font-size: 1.1rem;
+    }
+
+    .pattern-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #f8f2e6;
+    }
+
+    .tip-box {
+      font-style: italic;
+      color: #ffd175;
+      margin-top: 8px;
+      font-size: 0.85rem;
+    }
+
+    /* Footer Details */
+    footer {
+      border-top: 2px solid #f8f2e6;
+      padding: 25px;
+      text-align: left;
+      font-weight: bold;
+      background-color: #14222f;
+      margin-top: 60px;
+    }
+
+    /* Responsive Design for smaller screens */
+    @media (max-width: 1024px) {
+      .patterns-container {
+        grid-template-columns: 1fr 1fr;
+      }
+      .featured-column {
+        grid-column: span 2;
+        grid-row: auto;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .patterns-container {
+        grid-template-columns: 1fr;
+      }
+      .featured-column {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section utilizing provided style properties and image links -->
+  <header>
+    <img class="hero-banner" src="images/header.jpg" alt="Get Hooked banner art featuring yarn and crochet hook over a stylized city skyline">
+    <div class="logo-container">
+      <img class="logo-img" src="images/logo.png" alt="Get Hooked! Logo">
+    </div>
+  </header>
+
+  <!-- Wireframe Bar Navigation Links pointing to index.html layout -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="patterns.html">Patterns</a>
+    <a href="resources.html">Resources</a>
+  </nav>
+
+  <main>
+    <h1>Quick Practice Projects</h1>
+    <p class="intro-p">
+      Now that you've learned the basics of crochet, it's time to practice with some small, beginner-friendly projects! These are simple patterns designed to help you build confidence while still making something fun and useful.
+    </p>
+
+    <div class="patterns-container">
+      
+      <!-- LEFT COLUMN: Wireframe Sidebar Summarizing Project Skills & Overview -->
+      <aside class="featured-column">
+        <img class="featured-image" src="20260701_134952_converted.jpg" alt="Crochet progress using soft blue velvet yarn wrapped around a copper crochet hook">
+        <h3>Core Skills Learned</h3>
+        <p>These three projects help you practice the most important skills in crochet:</p>
+        <ol>
+          <li>Working in loops and rounds</li>
+          <li>Increasing (INC) stitches</li>
+          <li>Decreasing (DEC) stitches</li>
+          <li>Changing yarn colors</li>
+          <li>Finishing your work neatly</li>
+        </ol>
+        
+        <h3>What's Next?</h3>
+        <p>Once you’re comfortable with these basics, you’ll be ready for bigger projects like:</p>
+        <ul>
+          <li>Detailed Plushies</li>
+          <li>Cozy Blankets</li>
+          <li>Custom Clothing</li>
+        </ul>
+      </aside>
+
+      <!-- ROW 1: Pattern 1 - Easy Patterned Granny Square -->
+      <div class="pattern-card">
+        <div>
+          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <h4>1. Granny Square: Rd 1</h4>
+          <p>MR, CH 3, 2 DC, CH 2<br>(3 DC, CH 2) x3<br>SL ST to close</p>
+        </div>
+      </div>
+
+      <div class="pattern-card">
+        <div>
+          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <h4>1. Granny Square: Rd 2</h4>
+          <p>In each corner: 3 DC, CH 2, 3 DC<br>SL ST to finish</p>
+          <p class="tip-box">Tip: Use a new color here if you want!</p>
+        </div>
+      </div>
+
+      <div class="pattern-card">
+        <div>
+          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <h4>1. Granny Square: Rd 3</h4>
+          <p>Repeat Round 2, switching colors every round if desired.</p>
+          <p class="tip-box">Tip: Changing colors each round creates a striped, patterned effect!</p>
+        </div>
+      </div>
+
+
+      <!-- ROW 2: Pattern 2 - Simple Amigurumi Ball (Mini Plush) -->
+      <div class="pattern-card">
+        <div>
+          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <h4>2. Amigurumi Ball: Setup</h4>
+          <p><strong>Round 1:</strong> MR, SC 6</p>
+          <p><strong>Round 2:</strong> INC around (12)</p>
+          <p><strong>Round 3:</strong> (SC, INC) x6 (18)</p>
+        </div>
+      </div>
+
+      <div class="pattern-card">
+        <div>
+          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <h4>2. Amigurumi Ball: Body</h4>
+          <p><strong>Round 4–5:</strong> SC around (18)</p>
+          <p><strong>Round 6:</strong> (SC, DEC) x6 (12)</p>
+          <p class="tip-box">Stuff lightly with filling before moving forward!</p>
+        </div>
+      </div>
+
+      <div class="pattern-card">
+        <div>
+          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <h4>2. Amigurumi Ball: Finish</h4>
+          <p><strong>Round 7:</strong> DEC around (6)</p>
+          <p>Close and weave in ends.</p>
+          <p class="tip-box">Tip: You can turn this into a keychain, bead, or tiny plush head!</p>
+        </div>
+      </div>
+
+
+      <!-- ROW 3: Pattern 3 - Beginner Crochet Coaster (Flat Circle) -->
+      <div class="pattern-card">
+        <div>
+          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <h4>3. Coaster: Rounds 1-3</h4>
+          <p><strong>Round 1:</strong> MR, SC 6</p>
+          <p><strong>Round 2:</strong> INC around (12)</p>
+          <p><strong>Round 3:</strong> (SC, INC) x6 (18)</p>
+        </div>
+      </div>
+
+      <div class="pattern-card">
+        <div>
+          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <h4>3. Coaster: Rounds 4-5</h4>
+          <p><strong>Round 4:</strong> (SC 2, INC) x6 (24)</p>
+          <p><strong>Round 5:</strong> (SC 3, INC) x6 (30)</p>
+        </div>
+      </div>
+
+      <div class="pattern-card">
+        <div>
+          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <h4>3. Coaster: Complete</h4>
+          <p>Fasten off and weave in ends neatly.</p>
+          <p class="tip-box">Tip: Use cotton yarn so your completed coaster absorbs liquid well!</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer matches the copyright structure of index.html -->
+  <footer>
+    <p>&copy; 2026 Get Hooked! | Maxine Jesse Ledesma</p>
+  </footer>
+
+</body>
+</html>
