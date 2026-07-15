@@ -34,14 +34,19 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: rgba(27, 46, 63, 0.85);
-      padding: 15px;
+      padding: 8px;
       border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .logo-img {
       width: 140px;
       height: 140px;
       display: block;
+      border-radius: 50%; /* Crops out the white corners of the logo image */
+      object-fit: cover;   /* Keeps the circular shape perfectly centered */
     }
 
     /* Navigation Bar matching wireframe */
@@ -136,26 +141,28 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 260px;
       border: 1px solid #34526f;
     }
 
+    /* Adjusted to prevent cropping on vertical process images */
     .pattern-thumbnail {
       width: 100%;
-      height: 140px;
-      object-fit: cover;
+      height: auto;
+      max-height: 240px;  /* Keeps tall images from breaking the grid layout heights */
+      object-fit: contain; /* Prevents cropping at the top and bottom */
       border-radius: 6px;
       margin-bottom: 12px;
+      background-color: rgba(20, 34, 47, 0.3); /* Subtle background for contrast */
     }
 
     .pattern-card h4 {
-      margin: 0 0 8px 0;
+      margin: 10px 0 8px 0;
       color: #ffffff;
       font-size: 1.1rem;
     }
 
     .pattern-card p {
-      margin: 0;
+      margin: 0 0 10px 0;
       font-size: 0.95rem;
       line-height: 1.4;
       color: #f8f2e6;
@@ -224,7 +231,7 @@
 
   <!-- Header Section utilizing provided style properties and image links -->
   <header>
-    <img class="hero-banner" src="images/header.jpg" alt="Get Hooked banner art featuring yarn and crochet hook over a stylized city skyline">
+    <img class="hero-banner" src="images/header.png" alt="Get Hooked banner art featuring yarn and crochet hook over a stylized city skyline">
     <div class="logo-container">
       <img class="logo-img" src="images/logo.png" alt="Get Hooked! Logo">
     </div>
@@ -248,7 +255,7 @@
       
       <!-- LEFT COLUMN: Wireframe Sidebar Summarizing Project Skills & Overview -->
       <aside class="featured-column">
-        <img class="featured-image" src="20260701_134952_converted.jpg" alt="Crochet progress using soft blue velvet yarn wrapped around a copper crochet hook">
+        <img class="featured-image" src="images/final product.webp" alt="Finished beautiful purple, white, and blue patterned crochet granny square held in a hand">
         <h3>Core Skills Learned</h3>
         <p>These three projects help you practice the most important skills in crochet:</p>
         <ol>
@@ -271,27 +278,30 @@
       <!-- ROW 1: Pattern 1 - Easy Patterned Granny Square -->
       <div class="pattern-card">
         <div>
-          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <img class="pattern-thumbnail" src="images/image 2, step 1.1.webp" alt="Crochet progress illustration: Round 1 under way">
           <h4>1. Granny Square: Rd 1</h4>
           <p>MR, CH 3, 2 DC, CH 2<br>(3 DC, CH 2) x3<br>SL ST to close</p>
+          <img class="pattern-thumbnail" src="images/image 3, step 1.2.webp" alt="Crochet progress illustration: Round 1 complete">
         </div>
       </div>
 
       <div class="pattern-card">
         <div>
-          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <img class="pattern-thumbnail" src="images/image 4, step 2.1.webp" alt="Crochet progress illustration: Round 2 starting with a new color">
           <h4>1. Granny Square: Rd 2</h4>
           <p>In each corner: 3 DC, CH 2, 3 DC<br>SL ST to finish</p>
           <p class="tip-box">Tip: Use a new color here if you want!</p>
+          <img class="pattern-thumbnail" src="images/image 5, step 2.2.webp" alt="Crochet progress illustration: Round 2 complete">
         </div>
       </div>
 
       <div class="pattern-card">
         <div>
-          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <img class="pattern-thumbnail" src="images/image 6, step 3.1.webp" alt="Crochet progress illustration: Round 3 growing color details">
           <h4>1. Granny Square: Rd 3</h4>
           <p>Repeat Round 2, switching colors every round if desired.</p>
           <p class="tip-box">Tip: Changing colors each round creates a striped, patterned effect!</p>
+          <img class="pattern-thumbnail" src="images/image 7, step 3.2.webp" alt="Crochet progress illustration: Round 3 complete">
         </div>
       </div>
 
@@ -299,7 +309,7 @@
       <!-- ROW 2: Pattern 2 - Simple Amigurumi Ball (Mini Plush) -->
       <div class="pattern-card">
         <div>
-          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <img class="pattern-thumbnail" src="images/20260701_134952_converted.webp" alt="Placeholder image of crochet progress">
           <h4>2. Amigurumi Ball: Setup</h4>
           <p><strong>Round 1:</strong> MR, SC 6</p>
           <p><strong>Round 2:</strong> INC around (12)</p>
@@ -309,7 +319,7 @@
 
       <div class="pattern-card">
         <div>
-          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <img class="pattern-thumbnail" src="images/20260701_134952_converted.webp" alt="Placeholder image of crochet progress">
           <h4>2. Amigurumi Ball: Body</h4>
           <p><strong>Round 4-5:</strong> SC around (18)</p>
           <p><strong>Round 6:</strong> (SC, DEC) x6 (12)</p>
@@ -319,7 +329,7 @@
 
       <div class="pattern-card">
         <div>
-          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <img class="pattern-thumbnail" src="images/20260701_134952_converted.webp" alt="Placeholder image of crochet progress">
           <h4>2. Amigurumi Ball: Finish</h4>
           <p><strong>Round 7:</strong> DEC around (6)</p>
           <p>Close and weave in ends.</p>
@@ -331,7 +341,7 @@
       <!-- ROW 3: Pattern 3 - Beginner Crochet Coaster (Flat Circle) -->
       <div class="pattern-card">
         <div>
-          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <img class="pattern-thumbnail" src="images/20260701_134952_converted.webp" alt="Placeholder image of crochet progress">
           <h4>3. Coaster: Rounds 1-3</h4>
           <p><strong>Round 1:</strong> MR, SC 6</p>
           <p><strong>Round 2:</strong> INC around (12)</p>
@@ -341,7 +351,7 @@
 
       <div class="pattern-card">
         <div>
-          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <img class="pattern-thumbnail" src="images/20260701_134952_converted.webp" alt="Placeholder image of crochet progress">
           <h4>3. Coaster: Rounds 4-5</h4>
           <p><strong>Round 4:</strong> (SC 2, INC) x6 (24)</p>
           <p><strong>Round 5:</strong> (SC 3, INC) x6 (30)</p>
@@ -350,7 +360,7 @@
 
       <div class="pattern-card">
         <div>
-          <img class="pattern-thumbnail" src="20260701_134952_converted.jpg" alt="Crochet progress illustration">
+          <img class="pattern-thumbnail" src="images/20260701_134952_converted.webp" alt="Placeholder image of crochet progress">
           <h4>3. Coaster: Complete</h4>
           <p>Fasten off and weave in ends neatly.</p>
           <p class="tip-box">Tip: Use cotton yarn so your completed coaster absorbs liquid well!</p>
